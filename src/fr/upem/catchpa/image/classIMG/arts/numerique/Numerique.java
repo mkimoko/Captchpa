@@ -16,7 +16,7 @@ import fr.upem.catchpa.image.classIMG.arts.Arts;
 //Classe représentant la classe d'image Numériques (elle appartient à la classe Arts)
 public class Numerique extends Arts {
 
-	protected Numerique(URL photo, Level level) {
+	protected Numerique(String photo, Level level) {
 		super(photo, level);
 		// TODO Auto-generated constructor stub
 	}

@@ -16,7 +16,7 @@ import fr.upem.catchpa.image.classIMG.arts.Arts;
 //Classe représentant la classe d'image Feutres (elle appartient à la classe Arts)
 public class Feutres extends Arts{
 
-	protected Feutres(URL photo, Level level) {
+	protected Feutres(String photo, Level level) {
 		super(photo, level);
 		// TODO Auto-generated constructor stub
 	}
@@ -26,5 +26,6 @@ public class Feutres extends Arts{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
 
 }

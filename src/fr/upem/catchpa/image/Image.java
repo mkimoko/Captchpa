@@ -17,16 +17,16 @@ import fr.upem.catchpa.image.classIMG.Level;
 public interface Image {
 	
 	
-	public URL getPhoto();//retourne le chemin du fichier image
+	public String getPhoto();//retourne le chemin du fichier image
 		
 	public Level getLevel();//retourne le niveau de difficulté de l'image
 
-	public ArrayList<URL> getPhotos(); //retourne les URL de toutes les photos 
+	public ArrayList<String> getPhotos(); //retourne les URL de toutes les photos 
 	
-	public ArrayList<URL> getPhotosOfClass(); //retourne les url des image d'une classIMG
+	public ArrayList<String> getPhotosOfClass(); //retourne les url des image d'une classIMG
 	
-	public URL getRandomPhotoURL(); // retourne une URL au hasard
+	public String getRandomPhotoPath(); // retourne le chemein d'un image au hasard au hasard
 	
-	public boolean isPhotoCorrect(URL url);
+	public boolean isPhotoCorrect(String path);
 	
 }

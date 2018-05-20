@@ -17,7 +17,7 @@ import fr.upem.catchpa.image.classIMG.arts.Arts;
 //Classe représentant la classe d'image Peinture (elle appartient à la classe Arts)
 public class Peinture extends Arts {
 
-	protected Peinture(URL photo, Level level) {
+	protected Peinture(String photo, Level level) {
 		super(photo, level);
 	}
 

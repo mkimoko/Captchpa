@@ -8,6 +8,7 @@
 
 package fr.upem.catchpa.image.classIMG;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -17,11 +18,11 @@ import fr.upem.catchpa.image.Image;
 public abstract class ClassIMG implements Image{
 
 	protected int id;//identifiant de l'image
-	protected URL photo;//URL de'image
+	protected String photo;//URL de'image
 	protected Level level;//niveau de difficulté 
 	
 	//Constructeur de la classe prend le chemin du fichier ainsi que sont niveau de difficulté
-	protected ClassIMG(URL photo, Level level) {
+	protected ClassIMG(String photo, Level level) {
 		this.photo = photo;
 		this.level = level;
 	}
@@ -36,7 +37,7 @@ public abstract class ClassIMG implements Image{
 	public abstract int hashCode();
 	
 	//retourne le chemin du fichier image
-	public URL getPhoto() {
+	public String getPhoto() {
 		return photo;
 		
 	}
@@ -47,21 +48,21 @@ public abstract class ClassIMG implements Image{
 	}
 
 	//retourne les URL de toutes les photos
-	public ArrayList<URL> getPhotos(){
+	public ArrayList<String> getPhotos(){
 		return null;
 	}
 	
 	//retourne les url des image d'une classIMG
-	public ArrayList<URL> getPhotosOfClass(){
+	public ArrayList<String> getPhotosOfClass(){
 		return null;
 	}
 	
 	// retourne une URL au hasard
-	public URL getRandomPhotoURL() {
+	public String getRandomPhotoPath() {
 		return null;
 	}
 	
-	public boolean isPhotoCorrect(URL url) {
+	public boolean isPhotoCorrect(String path) {
 		return false;
 	}
 	
