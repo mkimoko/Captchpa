@@ -21,11 +21,7 @@ public interface Image {
 		
 	public Level getLevel();//retourne le niveau de difficulté de l'image
 
-	public ArrayList<String> getPhotos(); //retourne les URL de toutes les photos 
 	
-	public ArrayList<String> getPhotosOfClass(); //retourne les url des image d'une classIMG
-	
-	public String getRandomPhotoPath(); // retourne le chemein d'un image au hasard au hasard
 	
 	public boolean isPhotoCorrect(String path);
 	

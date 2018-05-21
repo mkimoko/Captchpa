@@ -11,6 +11,7 @@ package fr.upem.catchpa.image.classIMG;
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import fr.upem.catchpa.image.Image;
 
@@ -41,29 +42,11 @@ public abstract class ClassIMG implements Image{
 		return photo;
 		
 	}
-	
-	//retourne le niveau de difficulté de l'image
-	public Level getLevel() {
-		return level;
-	}
 
-	//retourne les URL de toutes les photos
-	public ArrayList<String> getPhotos(){
-		return null;
-	}
-	
-	//retourne les url des image d'une classIMG
-	public ArrayList<String> getPhotosOfClass(){
-		return null;
-	}
-	
-	// retourne une URL au hasard
-	public String getRandomPhotoPath() {
-		return null;
-	}
-	
+		
 	public boolean isPhotoCorrect(String path) {
-		return false;
+		
+		return path.contains("IMAGES");
 	}
 	
 }

@@ -17,7 +17,7 @@ import fr.upem.catchpa.image.classIMG.arts.Arts;
 //Classe représentant la classe d'image Peinture (elle appartient à la classe Arts)
 public class Peinture extends Arts {
 
-	protected Peinture(String photo, Level level) {
+	public Peinture(String photo, Level level) {
 		super(photo, level);
 	}
 
@@ -25,6 +25,12 @@ public class Peinture extends Arts {
 	public int hashCode() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public Level getLevel() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 
