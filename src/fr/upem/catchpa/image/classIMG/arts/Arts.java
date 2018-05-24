@@ -16,7 +16,7 @@ import fr.upem.catchpa.image.classIMG.*;
 //Classe représentant la classe d'image Arts
 public abstract class Arts extends ClassIMG {
 
-	protected Arts(String photo, Level level) {
+	protected Arts(URL photo, Level level) {
 		super(photo, level);
 	}
 

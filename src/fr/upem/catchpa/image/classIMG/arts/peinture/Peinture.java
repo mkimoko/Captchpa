@@ -17,7 +17,7 @@ import fr.upem.catchpa.image.classIMG.arts.Arts;
 //Classe représentant la classe d'image Peinture (elle appartient à la classe Arts)
 public class Peinture extends Arts {
 
-	public Peinture(String photo, Level level) {
+	public Peinture(URL photo, Level level) {
 		super(photo, level);
 	}
 
@@ -31,6 +31,12 @@ public class Peinture extends Arts {
 	public Level getLevel() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public boolean isPhotoCorrect(String path) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 

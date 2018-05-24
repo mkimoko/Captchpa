@@ -16,7 +16,7 @@ import fr.upem.catchpa.image.classIMG.arts.Arts;
 //Classe représentant la classe d'image Numériques (elle appartient à la classe Arts)
 public class Numerique extends Arts {
 
-	protected Numerique(String photo, Level level) {
+	protected Numerique(URL photo, Level level) {
 		super(photo, level);
 		// TODO Auto-generated constructor stub
 	}
@@ -25,6 +25,18 @@ public class Numerique extends Arts {
 	public int hashCode() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public Level getLevel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isPhotoCorrect(String path) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 

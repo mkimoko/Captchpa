@@ -17,9 +17,10 @@ import fr.upem.catchpa.image.classIMG.Level;
 public interface Image {
 	
 	
-	public String getPhoto();//retourne le chemin du fichier image
+	public URL getPhoto(); //retourne le chemin du fichier image
 		
-	public Level getLevel();//retourne le niveau de difficulté de l'image
+	public Level getLevel(); //retourne le niveau de difficulté de l'image
+	
 
 	
 	

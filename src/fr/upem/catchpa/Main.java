@@ -20,7 +20,7 @@ public class Main {
 		ArrayList<String> list = new ArrayList<String>();
 		captcha.getPhotoOfClass("/home/echoes/eclipse-workspace/Catchpa/IMAGES/PEINTURE", list);
 		
-		captcha.getImages().add( new Peinture("/eclipse-workspace/Catchpa/IMAGES",Level.Low ) );
+		//captcha.getImages().add( new Peinture("/eclipse-workspace/Catchpa/IMAGES",Level.Low ) );
 		System.out.println(list);
 		System.out.println(captcha.getImages().get(0).isPhotoCorrect("ce/Catchpa/IMAGES/"));
 	}
