@@ -62,6 +62,24 @@ public abstract class ClassIMG implements Images{
 			
 	}
 	
+	public ArrayList<URL> getRandomPhotoUrlList(int i){
+		
+		ArrayList<URL> bdd = this.getPhotos();
+		ArrayList<URL> result = new ArrayList<URL>();
+		URL url;
+		int j = 0;
+		
+		while(j < i) {
+			url = getRandomPhotoURL();
+			if (bdd.contains(url)) {
+				result.add(url);
+				bdd.remove(url);
+				j++;
+			}	
+		}
+		return result;
+	}
+	
 	public boolean isPhotoCorrect(URL url) {
 		if (Objects.requireNonNull(url) != null) {
 			String NameRep = new String(this.getClass().getPackageName());

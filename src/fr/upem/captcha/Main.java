@@ -6,9 +6,12 @@ public class Main {
 	
 	public static void main(String[] args) {
 	
-		Peinture p = new Peinture();
+		/*Peinture p = new Peinture();
 		System.out.println(p.getPhotos());
-		p.isPhotoCorrect(p.getRandomPhotoURL());
+		p.isPhotoCorrect(p.getRandomPhotoURL());*/
+		
+		ImageManager manager = new ImageManager();
+		System.out.println(manager.shakeSelection());
 	}
 
 }
