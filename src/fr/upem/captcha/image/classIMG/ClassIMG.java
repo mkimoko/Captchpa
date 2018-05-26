@@ -18,12 +18,9 @@ import java.util.Objects;
 import java.util.Random;
 
 public abstract class ClassIMG implements Images{
-	protected ArrayList<URL> photos; //URL des images
 	
 	//Constructeur
-	protected ClassIMG() {
-		this.photos = getPhotos();
-	}
+	protected ClassIMG() {}
 	
 	//retourne le chemin du fichier image
 	public ArrayList<URL> getPhotos() {
@@ -39,8 +36,7 @@ public abstract class ClassIMG implements Images{
 					try {
 						images.add(f.toURI().toURL());
 					} catch (MalformedURLException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
+						System.out.println("Mauvaise URL");
 					}
 				}
 			}
@@ -48,33 +44,28 @@ public abstract class ClassIMG implements Images{
 		
 		return images;		
 	}
-	
-	
-	public void addUrl(URL url) {
-		photos.add(url);
-	}
-	
+
 	//retourne une URL de photo au hasard
 	public URL getRandomPhotoURL() {
 		Random rand = new Random();
 		
-		return photos.get( rand.nextInt( photos.size() ) ); 
+		return getPhotos().get( rand.nextInt( getPhotos().size() ) ); 
 			
 	}
 	
-	public ArrayList<URL> getRandomPhotoUrlList(int i){
+	public ArrayList<URL> getRandomPhotoUrlList(int nbElmt){
 		
 		ArrayList<URL> bdd = this.getPhotos();
 		ArrayList<URL> result = new ArrayList<URL>();
 		URL url;
-		int j = 0;
+		int compteur = 0;
 		
-		while(j < i) {
+		while(compteur < nbElmt) {
 			url = getRandomPhotoURL();
 			if (bdd.contains(url)) {
 				result.add(url);
 				bdd.remove(url);
-				j++;
+				compteur++;
 			}	
 		}
 		return result;

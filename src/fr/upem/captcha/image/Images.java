@@ -15,10 +15,10 @@ public interface Images {
 	
 	
 	public List<URL> getPhotos(); //retourne la lists des URL d'un dossier 
-	
-	public void addUrl(URL url);
-	
+		
 	public URL getRandomPhotoURL(); //retourne une URL de photo au hasard
+	
+	public ArrayList<URL> getRandomPhotoUrlList(int nbElmt);
 	
 	public boolean isPhotoCorrect(URL url);
 		
