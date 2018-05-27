@@ -30,7 +30,7 @@ public abstract class ClassIMG implements Images{
 		File[] files = repertoire.listFiles();
 		ArrayList<URL> images = new ArrayList<URL>();
 		
-		if (Objects.requireNonNull(files) != null ) {
+		if (Objects.Nonnull(files) != null ) {
 			for (File f : files) {
 				if (! f.getPath().isEmpty() && ! f.isDirectory() && ( f.getPath().contains(".jpg") || f.getPath().contains(".png") ) ) {
 					try {

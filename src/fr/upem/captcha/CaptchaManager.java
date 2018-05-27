@@ -104,7 +104,7 @@ public class CaptchaManager {
 				}
 				alea = 9-result.size();
 				
-				for (URL url : numerique.getRandomPhotoUrlList(alea)) {
+				for (URL url : peinture.getRandomPhotoUrlList(alea)) {
 					result.add(url);
 				}
 				

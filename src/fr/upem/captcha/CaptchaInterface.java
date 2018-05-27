@@ -134,11 +134,12 @@ public class CaptchaInterface {
 					@Override
 					public void run() {
 						String result = manager.choice(choice, selectedImages);
+						frame.add(new JTextArea(result));
 						JFrame secondFrame = frame;
-						secondFrame.add(new JTextArea(result));
+						
+						//frame.setVisible(false);
 						secondFrame.setVisible(true);
-						frame.setVisible(false);
-						frame.dispose();
+						return;
 						
 					}
 				} ); 
