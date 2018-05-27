@@ -33,11 +33,12 @@ public class CaptchaManager {
 	
 	public ArrayList<URL> getSelection(){
 		Random rand = new Random();
+		//On génère un nombre aléatoire
 		int randomDraw = rand.nextInt( 3 )+1;
 		int alea = rand.nextInt( 4 )+1;
 		ArrayList<URL> result = new ArrayList<URL>();
-		System.out.println(alea);
 		
+		//On priorise un dossier donné dans la génération d'URL en fonction de randomDraw
 		switch (randomDraw) {
 			case 1:
 				for (URL url : feutres.getRandomPhotoUrlList(alea)) {
@@ -117,6 +118,7 @@ public class CaptchaManager {
 		
 	}
 
+	//mélange les éléments de la liste
 	public ArrayList<URL> shakeSelection(){
 		ArrayList<URL> bdd = this.getSelection();
 		ArrayList<URL> result = new ArrayList<URL>();
@@ -135,6 +137,7 @@ public class CaptchaManager {
 		return result;
 	}
 	
+	//Renvoie un nombre entre 1 et 3
 	public int typeChoice() {
 		Random rand = new Random();
 		int alea = rand.nextInt(3)+1;
@@ -142,6 +145,7 @@ public class CaptchaManager {
 		
 	}
 	
+	//Renvoie du texte en fonction de son paramètre
 	public String text(int choice) {
 		
 		switch (choice) {
@@ -160,17 +164,21 @@ public class CaptchaManager {
 		
 	}
 	
+	//Vérifie si on fait le bon choix en fonction des images qui nous sont données 
 	public String choice(int alea, ArrayList<URL> choiceSelection) {
-			int nbGoodPhoto = 0;
+			int nbGoodPhoto = 0;//Nombre de bonne photo trouvé
+			//si le nombre est entre 1 et 3
 			if (alea > 0 && alea < 4 && Objects.nonNull(choiceSelection)) {
 
 				switch (alea) {
 				case 1:
 					// trouver les feutres
 					for (URL url : choiceSelection) {
+						//pour chaque URL de notre selection on vérifie si elle est correcte
 						if(feutres.isPhotoCorrect(url))
 							nbGoodPhoto++;
 					}
+					//En cas d'erreur 
 					if (choiceSelection.size() == nbGoodPhoto ) {
 						for (URL url : choiceSelection) {
 							if(! feutres.isPhotoCorrect(url)) {
@@ -185,9 +193,11 @@ public class CaptchaManager {
 				case 2:
 					// trouver les numerique
 					for (URL url : choiceSelection) {
+						//pour chaque URL de notre selection on vérifie si elle est correcte
 						if(numerique.isPhotoCorrect(url))
 							nbGoodPhoto++;
 					}
+					//En cas d'erreur
 					if (choiceSelection.size() == nbGoodPhoto ) {
 						for (URL url : choiceSelection) {
 							if(! numerique.isPhotoCorrect(url)) {
@@ -202,10 +212,11 @@ public class CaptchaManager {
 				case 3:
 					// trouver les peintures
 					for (URL url : choiceSelection) {
+						//pour chaque URL de notre selection on vérifie si elle est correcte
 						if(peinture.isPhotoCorrect(url))
 							nbGoodPhoto++;
 					}
-					
+					//En cas d'erreur
 					if (choiceSelection.size() == nbGoodPhoto ) {
 
 						for (URL url : choiceSelection) {

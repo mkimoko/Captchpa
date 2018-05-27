@@ -38,6 +38,7 @@ public class CaptchaInterface {
 		this.manager = new CaptchaManager();
 	}
 	
+	//Crée une fenetre
 	public JFrame createWindow() {
 		JFrame frame = new JFrame("Captcha");
 		
@@ -48,10 +49,12 @@ public class CaptchaInterface {
 		return frame;
 	}
 	
+	//affiche les elements et leur donne un comportenemt
 	public void showElmt() {
 		JFrame frame = createWindow();
-		frame.setLayout(new GridLayout(4,3));
-		final ArrayList<URL> urlList = manager.shakeSelection();
+		frame.setLayout(new GridLayout(4,3));//on donne un layout à la fanetre
+		
+		final ArrayList<URL> urlList = manager.shakeSelection();//On crée la liste aléatoire d'URL
 		ArrayList<BufferedImage> images = new ArrayList<BufferedImage>(urlList.size());
 		ArrayList<Image> sImages = new ArrayList<Image>(urlList.size());
 		ArrayList<JLabel> tmpLabels = new ArrayList<JLabel>(urlList.size());
@@ -131,13 +134,14 @@ public class CaptchaInterface {
 			public void actionPerformed(ActionEvent arg0) {
 				EventQueue.invokeLater(new Runnable() {
 					
+					//Comportement lorsque l'on apuie sur Ok
 					@Override
 					public void run() {
+						//crée un String avec le résultat de notre vérification
 						String result = manager.choice(choice, selectedImages);
 						frame.add(new JTextArea(result));
 						JFrame secondFrame = frame;
 						
-						//frame.setVisible(false);
 						secondFrame.setVisible(true);
 						return;
 						

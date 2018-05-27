@@ -18,8 +18,8 @@ public interface Images {
 		
 	public URL getRandomPhotoURL(); //retourne une URL de photo au hasard
 	
-	public ArrayList<URL> getRandomPhotoUrlList(int nbElmt);
+	public ArrayList<URL> getRandomPhotoUrlList(int nbElmt);//retourne une arrayList d'url de nbElement element
 	
-	public boolean isPhotoCorrect(URL url);
+	public boolean isPhotoCorrect(URL url);//vérifie si une URL appartient bien au dossier courant
 		
 }
